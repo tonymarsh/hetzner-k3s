@@ -60,6 +60,14 @@ module Hetzner
           destination_ips: []
         },
         {
+          description: 'Allow all other TCP',
+          direction: 'in',
+          protocol: 'tcp',
+          port: 'any',
+          source_ips: networks,
+          destination_ips: []
+        },
+        {
           description: 'Allow ICMP (ping)',
           direction: 'in',
           protocol: 'icmp',
